@@ -3,7 +3,7 @@ Autor: Nico Zuber
 Version: 0.1.2.4
 Datum: 27.11.2017
 */
-
+HAAAALLLOOOOO
 // Includes
 #include <stdio.h>
 #include <stdlib.h>
@@ -14,7 +14,7 @@ Datum: 27.11.2017
  typedef enum
  {
 	 STRING,
-	 NUMBER
+
  } Inputs_t;
  
  typedef struct person
