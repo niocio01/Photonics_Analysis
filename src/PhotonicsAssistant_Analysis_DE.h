@@ -1,6 +1,17 @@
 // Headerfile für Dateneingabe
 
-typedef enum{
+#ifndef DATENEINGABE_H
+#define DATENEINGABE_H
+
+typedef struct									// Struktur für die Dateneingabe
+{
+	char frage[250];
+	bool antwort;
+	char begruendung[250];
+}frage_t;
+
+typedef enum
+{
 	DIFFERENTIAL_ONE,
 	DIFFERENTIAL_TWO,
 	INTEGRAL_ONE,
@@ -8,4 +19,10 @@ typedef enum{
 	KURVENDISKUSSION
 }themen_t;
 
-extern frage_t *p_fragen pionterUebergabe(themen_t thema); // Rückgabewert Funkt.name (typedef name von oben)
+
+void initDaten (void);
+
+frage_t * pointerUebergabe(themen_t thema); // Rückgabewert Funkt.name (typedef name von oben)
+
+
+#endif

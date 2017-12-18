@@ -13,10 +13,11 @@ Datum: 12.11.2017
 #include <stdbool.h>
 #include <stdio.h>
 #include <string.h>
+#include "PhotonicsAssistant_Analysis_DE.h"
 
-#indef FRAGENERFASSEN_H
+#ifndef FRAGENERFASSEN_H
 #define FRAGENERFASSEN_H
 
-void nextQuestion(frage_t *p_fragen int frageNr);
+void nextQuestion(frage_t *p_fragen, int frageNr);
 
 #endif

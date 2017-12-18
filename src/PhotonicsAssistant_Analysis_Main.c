@@ -26,33 +26,41 @@ Name: PhotonicsAssistant_Analysis_Main.c
 #include <string.h>
 #include <stddef.h>
 
+
 #include "PhotonicsAssistant_Analysis_DE.h"
 #include "FragenSteller.h"
 
 
+
+
 void analysisMain(void)
 {
+	int choice = 0;
+	int check = 0;
+	
+	initDaten();
 	printf(
-	"Photonics assistant, Analysis 1\n\n \ 
-	Choose your toppic:\n\n \
+	"Photonics assistant, Analysis 1\n Choose your toppic:\n \n\
 	0 - Differential 1\n \
 	1 - Differential 2\n \
 	2 - Integral 1\n \
 	3 - Integral 2\n \
 	4 - Integral 2\n \
 	5 - Kurvendiskussion\n");
-	
-	int check = scanf("%d", &choice);
-  
-	  if( check != 1) {
-		printf("Intake failed\n");
-		return 1;
-	  }
-	 
+	do
+	{
+		check = scanf("%d", &choice);
+	  
+		  if( check != 1) {
+			printf("Intake failed\n");
+		  }
+		  
+	} while( choice < 5 || check != 1 );
+		
 	  switch(choice) {
-		case DIFFEENTIAL_ONE  : printf("Multiple choice, Differential 1\n");	//insert auxiliary function
+		case DIFFERENTIAL_ONE  : printf("Multiple choice, Differential 1\n");	//insert auxiliary function
 				  break;
-		case DIFFEENTIAL_TWO  : printf("Multiple choice, Differential 2\n");	//insert auxiliary function
+		case DIFFERENTIAL_TWO  : printf("Multiple choice, Differential 2\n");	//insert auxiliary function
 				  break;
 		case INTEGRAL_ONE  :	printf("Multiple choice, Integral 1\n");		//insert auxiliary function
 		
@@ -68,20 +76,13 @@ void analysisMain(void)
 	
 	for (int frageNr = 0; frageNr<6; frageNr++)
 	{		
-		nextQuestion(&p_choosenSubject, frageNr);
+		nextQuestion(p_choosenSubject, frageNr);
 	}
 	  
 	
 	  
-  return 0;
+  return;
 }	 
-	  
-	system("PAUSE");
 
-	return 0;
-}
-
-
-main:
 
 

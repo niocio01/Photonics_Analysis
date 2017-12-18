@@ -6,13 +6,24 @@ Version: 0.2
 Datum: 12.11.2017
 Änderungen: 
  */
+ 
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
+#include <stddef.h>
+ #include "FragenSteller.h"
+ #include "PhotonicsAssistant_Analysis_DE.h"
+ 
 
 
-void nextQuestion(frage_t *p_fragen int frageNr)			//Hier wird auf den Pointer gezeigt welchen wir von Martina bekommen.
+void nextQuestion(frage_t *p_fragen, int frageNr)			//Hier wird auf den Pointer gezeigt welchen wir von Martina bekommen.
 {
 	char answer_c;											//Brauchen wir um die eingegebene antwort in ein boolean(0,1) umzuwandeln
 	bool answer_b;
 	bool inputSuccsessful = false;							//brauchen wir um zu überprüfen ob die eingabe korrekt ist mit y,n 
+	char name[99] = {0}; 
 	
 	printf("%s\n",(p_fragen+frageNr)->frage);				//printed die Frage welche von Nuria im Arrey definiert wurde.
 	scanf("%c",&answer_c);									//Hier wird die Eingabe y n eingegeben
@@ -42,14 +53,12 @@ void nextQuestion(frage_t *p_fragen int frageNr)			//Hier wird auf den Pointer g
 	}
 	else													//Hier wird die eingegebene Antwort mit der richtigen Antwort verglichen
 	{
-		printf("Haahahaaa, Du kasch jo ger nüüüütt!!!\n")
-		printf("Bitte gieb deinen Namen ein: ")
-		scanf("%s",&name);
-		printf("Liste der Repetenten 2018:\n  Fabian Sket %s",name);
+		printf("Haahahaaa, Du kasch jo ger nüüüütt!!!\n");
+		printf("Bitte gieb deinen Namen ein: ");
+		scanf("%s",&name[0]);
+		printf("Liste der Repetenten 2018:\n  Fabian Sket %s", name);
 	}
 	printf("%s\n",(p_fragen+frageNr)->begruendung);			//Die Begründung wird immer geprinted
-	
-	return 0;
 
 }
 	
