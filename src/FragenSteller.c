@@ -42,7 +42,10 @@ void nextQuestion(frage_t *p_fragen int frageNr)			//Hier wird auf den Pointer g
 	}
 	else													//Hier wird die eingegebene Antwort mit der richtigen Antwort verglichen
 	{
-		printf("Falsch\n")
+		printf("Haahahaaa, Du kasch jo ger nüüüütt!!!\n")
+		printf("Bitte gieb deinen Namen ein: ")
+		scanf("%s",&name);
+		printf("Liste der Repetenten 2018:\n  Fabian Sket %s",name);
 	}
 	printf("%s\n",(p_fragen+frageNr)->begruendung);			//Die Begründung wird immer geprinted
 	
