@@ -29,14 +29,6 @@ Name: PhotonicsAssistant_Analysis_Main.c
 #include "PhotonicsAssistant_Analysis_DE.h"
 #include "FragenSteller.h"
 
-/*typedef enum{
-	DIFFEENTIAL_ONE,
-	DIFFEENTIAL_TWO,
-	INTEGRAL_ONE,
-	INTEGRAL_TWO,
-	KURVENDISKUSSION
-	}themen_t;
-	*/
 
 void analysisMain(void)
 {
@@ -62,7 +54,8 @@ void analysisMain(void)
 				  break;
 		case DIFFEENTIAL_TWO  : printf("Multiple choice, Differential 2\n");	//insert auxiliary function
 				  break;
-		case INTEGRAL_ONE  : printf("Multiple choice, Integral 1\n");		//insert auxiliary function
+		case INTEGRAL_ONE  :	printf("Multiple choice, Integral 1\n");		//insert auxiliary function
+		
 				  break;
 		case INTEGRAL_TWO  : printf("Multiple choice, Integral 2\n");		//insert auxiliary function
 				  break;
@@ -71,9 +64,14 @@ void analysisMain(void)
 		default : printf("%d unknown\n", choice);
 	  }
 	  
+	frage_t *p_choosenSubject = pointerUebergabe(choice);
+	
+	for (int frageNr = 0; frageNr<6; frageNr++)
+	{		
+		nextQuestion(&p_choosenSubject, frageNr);
+	}
 	  
-	  
-	  nextQuestion(&p_Fragen, frageNr);
+	
 	  
   return 0;
 }	 
