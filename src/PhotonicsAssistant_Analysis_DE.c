@@ -16,11 +16,14 @@ static frage_t *p_fragen_Differential_1 = &fragen_Differential_1[0];		// Pointer
 void initDaten (void)
 {
 	
-	strcpy(fragen_Differential_1[0].frage, "Das stimmt genau so.");
+	strcpy(fragen_Differential_1[0].frage, "Frage1");
 	fragen_Differential_1[0].antwort = true;
-	strcpy(fragen_Differential_1[0].begruendung, "Das stimmt genau so.");	
+	strcpy(fragen_Differential_1[0].begruendung, "Antwort1");	
 	
-
+	strcpy(fragen_Differential_1[1].frage, "Frage2");
+	fragen_Differential_1[1].antwort = false;
+	strcpy(fragen_Differential_1[1].begruendung, "Antwort2");	
+	
 	//fragen_Differential_1[0].antwort = true;
 	//fragen_Differential_1[0].begruendung = "Das stimmt genau so.";
 	/*

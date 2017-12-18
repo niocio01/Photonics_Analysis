@@ -35,6 +35,7 @@ Name: PhotonicsAssistant_Analysis_Main.c
 
 void analysisMain(void)
 {
+	static frage_t *p_choosenSubject;
 	int choice = 0;
 	int check = 0;
 	
@@ -55,10 +56,11 @@ void analysisMain(void)
 			printf("Intake failed\n");
 		  }
 		  
-	} while( choice < 5 || check != 1 );
+	} while( choice > 5 || check != 1 );
 		
 	  switch(choice) {
-		case DIFFERENTIAL_ONE  : printf("Multiple choice, Differential 1\n");	//insert auxiliary function
+		case 0  : printf("Multiple choice, Differential 1\n");	//insert auxiliary function
+				  p_choosenSubject = pointerUebergabe(DIFFERENTIAL_ONE);
 				  break;
 		case DIFFERENTIAL_TWO  : printf("Multiple choice, Differential 2\n");	//insert auxiliary function
 				  break;
@@ -72,7 +74,6 @@ void analysisMain(void)
 		default : printf("%d unknown\n", choice);
 	  }
 	  
-	frage_t *p_choosenSubject = pointerUebergabe(choice);
 	
 	for (int frageNr = 0; frageNr<6; frageNr++)
 	{		

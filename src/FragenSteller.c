@@ -26,6 +26,7 @@ void nextQuestion(frage_t *p_fragen, int frageNr)			//Hier wird auf den Pointer 
 	char name[99] = {0}; 
 	
 	printf("%s\n",(p_fragen+frageNr)->frage);				//printed die Frage welche von Nuria im Arrey definiert wurde.
+	fflush(stdin);
 	scanf("%c",&answer_c);									//Hier wird die Eingabe y n eingegeben
 	do														//Damit das Programm nicht abbricht bei einer falscheingabe wird dies wiederholt bis richtige Eingabe
 	{
@@ -53,10 +54,10 @@ void nextQuestion(frage_t *p_fragen, int frageNr)			//Hier wird auf den Pointer 
 	}
 	else													//Hier wird die eingegebene Antwort mit der richtigen Antwort verglichen
 	{
-		printf("Haahahaaa, Du kasch jo ger nüüüütt!!!\n");
-		printf("Bitte gieb deinen Namen ein: ");
-		scanf("%s",&name[0]);
-		printf("Liste der Repetenten 2018:\n  Fabian Sket %s", name);
+		printf("Haahahaaa, Du kasch jo ger nuuuutt!!!\n");
+		// printf("Bitte gieb deinen Namen ein: ");
+		// scanf("%s",&name[0]);
+		// printf("Liste der Repetenten 2018:\n  Fabian Sket %s", name);
 	}
 	printf("%s\n",(p_fragen+frageNr)->begruendung);			//Die Begründung wird immer geprinted
 
