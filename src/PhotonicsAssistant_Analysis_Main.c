@@ -40,6 +40,8 @@ void analysisMain(void)
 	int check = 0;
 	
 	initDaten();
+	
+	system("cls");
 	printf(
 	"Photonics assistant, Analysis 1\n Choose your toppic:\n \n\
 	0 - Differential 1\n \
@@ -57,26 +59,30 @@ void analysisMain(void)
 		  }
 		  
 	} while( choice > 5 || check != 1 );
+	
+	system("cls");
 		
 	  switch(choice) {
-		case 0  : printf("Multiple choice, Differential 1\n");	//insert auxiliary function
-				  p_choosenSubject = pointerUebergabe(DIFFERENTIAL_ONE);
+		case DIFFERENTIAL_ONE  : printf("Multiple choice, Differential 1\n \n");	//insert auxiliary function
 				  break;
-		case DIFFERENTIAL_TWO  : printf("Multiple choice, Differential 2\n");	//insert auxiliary function
+		case DIFFERENTIAL_TWO  : printf("Multiple choice, Differential 2\n \n");	//insert auxiliary function
 				  break;
-		case INTEGRAL_ONE  :	printf("Multiple choice, Integral 1\n");		//insert auxiliary function
-		
+		case INTEGRAL_ONE  :	printf("Multiple choice, Integral 1\n \n");		//insert auxiliary function
+					break;
+		case INTEGRAL_TWO  : printf("Multiple choice, Integral 2\n \n");			//insert auxiliary function
 				  break;
-		case INTEGRAL_TWO  : printf("Multiple choice, Integral 2\n");		//insert auxiliary function
-				  break;
-		case KURVENDISKUSSION  : printf("Multiple choice, Kurvendiskussion\n");	//insert auxiliary function
+		case KURVENDISKUSSION  : printf("Multiple choice, Kurvendiskussion\n \n");	//insert auxiliary function
 				  break;
 		default : printf("%d unknown\n", choice);
 	  }
 	  
+	  p_choosenSubject = pointerUebergabe(choice);
 	
 	for (int frageNr = 0; frageNr<6; frageNr++)
-	{		
+
+	{
+		printf("---------------------------------------------------------------------------\n\n" );
+		printf("Frage Nr. %i \n \n" , frageNr+1 );
 		nextQuestion(p_choosenSubject, frageNr);
 	}
 	  
