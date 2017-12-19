@@ -31,29 +31,29 @@ void initDaten (void)
 {
 	// fragen_Differential_1:
 	
-	strcpy(fragen_Differential_1[0].frage, "Frage1");
+	strcpy(fragen_Differential_1[0].frage, "Der Funktionswert f'(x) der Ableitung ist gerade die Steigung der Funktion f an der Stelle x");
 	fragen_Differential_1[0].antwort = true;
-	strcpy(fragen_Differential_1[0].begruendung, "Antwort1");	
+	strcpy(fragen_Differential_1[0].begruendung, "Dies ist die Definition der Ableitung");	
 	
-	strcpy(fragen_Differential_1[1].frage, "Frage2");
-	fragen_Differential_1[1].antwort = false;
-	strcpy(fragen_Differential_1[1].begruendung, "Antwort2");	
+	strcpy(fragen_Differential_1[1].frage, "Ist der Graph einer Funktion eine Gerade, dann ist die zugehörige Ableitung konstant.");
+	fragen_Differential_1[1].antwort = true;
+	strcpy(fragen_Differential_1[1].begruendung, "Eine Gerade hat an deder stelle x die Selbe Steigung, daher ist die Ableitung davon eine Konstante funkion.");	
 	
-	strcpy(fragen_Differential_1[2].frage, "Frage3");
-	fragen_Differential_1[2].antwort = true;
-	strcpy(fragen_Differential_1[2].begruendung, "Antwort3");
+	strcpy(fragen_Differential_1[2].frage, "Es sei f(x) := x^2, dann ist der Graph der Ableitung f'(x) eine Parabel.");
+	fragen_Differential_1[2].antwort = false;
+	strcpy(fragen_Differential_1[2].begruendung, "Nein, die Ableitung von x^2 ist eine Gerade durch den Nullpunkt, mit der Steigung 2.    f'(x) = 2x");
 	
-	strcpy(fragen_Differential_1[3].frage, "Frage4");
+	strcpy(fragen_Differential_1[3].frage, "Es sei f(x) := x^3, dann hat der Graph von f an der Stelle x = 5 die Steigung m = 75");
 	fragen_Differential_1[3].antwort = true;
-	strcpy(fragen_Differential_1[3].begruendung, "Antwort4");
+	strcpy(fragen_Differential_1[3].begruendung, "die ableitung von f(x)=x^3 ist f'(x)=3x^2, setzt man nun den wert 5 ein erhält man f'(5) = 3*5^2 = 75");
 	
-	strcpy(fragen_Differential_1[4].frage, "Frage5");
+	strcpy(fragen_Differential_1[4].frage, "Ist eine Funktion f das Doppelte einer Funktion g, dann ist nach der Faktor-Regel auch die Ableitung von f das Doppelte der Ableitung von g.");
 	fragen_Differential_1[4].antwort = true;
-	strcpy(fragen_Differential_1[4].begruendung, "Antwort5");
+	strcpy(fragen_Differential_1[4].begruendung, "ja, das ist die Definition der Faktor-Regel f(x) = c*g(x)  =>  f'(x) = c*g'(x)");
 	
-	strcpy(fragen_Differential_1[5].frage, "Frage6");
-	fragen_Differential_1[5].antwort = true;
-	strcpy(fragen_Differential_1[5].begruendung, "Antwort6");
+	strcpy(fragen_Differential_1[5].frage, "Es seien f(x) und x Grössen mit Masseinheit, dann hat f'(x) die gleiche Masseinheit wie f(x).");
+	fragen_Differential_1[5].antwort = false;
+	strcpy(fragen_Differential_1[5].begruendung, "Masseinheiten werden mit der Funktion zusammen abgeleitet, und ändern sich daher auch.");
 	
 	
 	// fragen_Differential_2:
