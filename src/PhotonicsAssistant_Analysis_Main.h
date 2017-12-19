@@ -13,9 +13,7 @@ Revision:
 -
 Task:
 Create assistant - multiple choice with answers
-
 Question:
-
 Name: PhotonicsAssistant_Analysis_Main.h
 */
 
