@@ -9,7 +9,6 @@
 #include "PhotonicsAssistant_Analysis_DE.h"
 
 
-
 static frage_t fragen_Differential_1[6];
 static frage_t *p_fragen_Differential_1 = &fragen_Differential_1[0];		// Pointer auf die erste Arraystelle pro Thema
 
@@ -24,36 +23,38 @@ static frage_t *p_fragen_Integral_2 = &fragen_Integral_2[0];				// Pointer auf d
 	
 static frage_t fragen_Kurvendiskussion[6];
 static frage_t *p_fragen_Kurvendiskussion = &fragen_Kurvendiskussion[0];	// Pointer auf die erste Arraystelle pro Thema
-	
+
+
 
 	
 void initDaten (void)
 {
+	
 	// fragen_Differential_1:
 	
-	strcpy(fragen_Differential_1[0].frage, "Der Funktionswert f'(x) der Ableitung ist gerade die Steigung der Funktion f an der Stelle x");
+	strcpy(fragen_Differential_1[0].frage, "Der Funktionswert f(x) der Ableitung ist gerade die Steigung der Funktion f an der Stelle x" );
 	fragen_Differential_1[0].antwort = true;
-	strcpy(fragen_Differential_1[0].begruendung, "Dies ist die Definition der Ableitung");	
+	strcpy(fragen_Differential_1[0].begruendung, "Dies ist die Definition der Ableitung" );	
 	
-	strcpy(fragen_Differential_1[1].frage, "Ist der Graph einer Funktion eine Gerade, dann ist die zugehörige Ableitung konstant.");
+	strcpy(fragen_Differential_1[1].frage, "Ist der Graph einer Funktion eine Gerade dann ist die zugehörige Ableitung konstant." );
 	fragen_Differential_1[1].antwort = true;
-	strcpy(fragen_Differential_1[1].begruendung, "Eine Gerade hat an deder stelle x die Selbe Steigung, daher ist die Ableitung davon eine Konstante funkion.");	
+	strcpy(fragen_Differential_1[1].begruendung, "Eine Gerade hat an deder stelle x die Selbe Steigung, daher ist die Ableitung davon eine Konstante funkion." );	
 	
-	strcpy(fragen_Differential_1[2].frage, "Es sei f(x) := x^2, dann ist der Graph der Ableitung f'(x) eine Parabel.");
+	strcpy(fragen_Differential_1[2].frage, "Es sei f(x) := x^2, dann ist der Graph der Ableitung f'(x) eine Parabel." );
 	fragen_Differential_1[2].antwort = false;
-	strcpy(fragen_Differential_1[2].begruendung, "Nein, die Ableitung von x^2 ist eine Gerade durch den Nullpunkt, mit der Steigung 2.    f'(x) = 2x");
+	strcpy(fragen_Differential_1[2].begruendung, "Nein, die Ableitung von x^2 ist eine Gerade durch den Nullpunkt, mit der Steigung 2.    f'(x) = 2x" );
 	
-	strcpy(fragen_Differential_1[3].frage, "Es sei f(x) := x^3, dann hat der Graph von f an der Stelle x = 5 die Steigung m = 75");
+	strcpy(fragen_Differential_1[3].frage, "Es sei f(x) := x^3, dann hat der Graph von f an der Stelle x = 5 die Steigung m = 75" );
 	fragen_Differential_1[3].antwort = true;
-	strcpy(fragen_Differential_1[3].begruendung, "die ableitung von f(x)=x^3 ist f'(x)=3x^2, setzt man nun den wert 5 ein erhält man f'(5) = 3*5^2 = 75");
+	strcpy(fragen_Differential_1[3].begruendung, "die ableitung von f(x)=x^3 ist f'(x)=3x^2, setzt man nun den wert 5 ein erhält man f'(5) = 3*5^2 = 75" );
 	
-	strcpy(fragen_Differential_1[4].frage, "Ist eine Funktion f das Doppelte einer Funktion g, dann ist nach der Faktor-Regel auch die Ableitung von f das Doppelte der Ableitung von g.");
+	strcpy(fragen_Differential_1[4].frage, "Ist eine Funktion f das Doppelte einer Funktion g, dann ist nach der Faktor-Regel auch die Ableitung von f das Doppelte der Ableitung von g." );
 	fragen_Differential_1[4].antwort = true;
-	strcpy(fragen_Differential_1[4].begruendung, "ja, das ist die Definition der Faktor-Regel f(x) = c*g(x)  =>  f'(x) = c*g'(x)");
+	strcpy(fragen_Differential_1[4].begruendung, "ja, das ist die Definition der Faktor-Regel f(x) = c*g(x)  =>  f'(x) = c*g'(x)" );
 	
-	strcpy(fragen_Differential_1[5].frage, "Es seien f(x) und x Grössen mit Masseinheit, dann hat f'(x) die gleiche Masseinheit wie f(x).");
+	strcpy(fragen_Differential_1[5].frage, "Es seien f(x) und x Grössen mit Masseinheit, dann hat f'(x) die gleiche Masseinheit wie f(x)." );
 	fragen_Differential_1[5].antwort = false;
-	strcpy(fragen_Differential_1[5].begruendung, "Masseinheiten werden mit der Funktion zusammen abgeleitet, und ändern sich daher auch.");
+	strcpy(fragen_Differential_1[5].begruendung, "Masseinheiten werden mit der Funktion zusammen abgeleitet, und ändern sich daher auch." );
 	
 	
 	// fragen_Differential_2:
