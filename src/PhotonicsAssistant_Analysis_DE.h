@@ -5,9 +5,9 @@
 
 typedef struct									// Struktur für die Dateneingabe
 {
-	char frage[250];
+	char frage[350];
 	bool antwort;
-	char begruendung[250];
+	char begruendung[350];
 }frage_t;
 
 typedef enum
