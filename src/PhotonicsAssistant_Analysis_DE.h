@@ -10,7 +10,7 @@ typedef struct									// Struktur für die Dateneingabe
 	char begruendung[350];
 }frage_t;
 
-typedef enum
+typedef enum  									// typdef für Themen
 {
 	DIFFERENTIAL_ONE,
 	DIFFERENTIAL_TWO,
